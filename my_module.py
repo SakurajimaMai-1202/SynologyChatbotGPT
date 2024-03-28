@@ -682,7 +682,7 @@ class ChatBot:
                             whole_text.append(word)
 
                             # Check if the current output ends with \n
-                            if re.search(r'[\n]', word[-1]):
+                           if word and len(word) > 0 and re.search(r'[\n]', word[-1]):
                                 sentence = ''.join(text).strip()
 
                                 if re.search(r'`{3}$', sentence) and code_block:
